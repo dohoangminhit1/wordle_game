@@ -1,69 +1,71 @@
-Wordle Game (React.js)
+# Wordle Game (React.js)
 
 A fun and interactive Wordle clone built using React.js! Challenge yourself to guess the hidden word within a limited number of attempts.
 
-Features
+## Features
 
-Play a Wordle-style word guessing game
+- Play a Wordle-style word guessing game
+- User-friendly interface with interactive feedback
+- Mobile-responsive design
+- Keyboard input support
+- Color-coded hints for correct and misplaced letters
 
-User-friendly interface with interactive feedback
-
-Mobile-responsive design
-
-Keyboard input support
-
-Color-coded hints for correct and misplaced letters
-
-Demo
+## Demo
 
 Check out the live demo: [Link to demo] (if applicable)
 
-Installation
+## Installation
 
 To run this project locally, follow these steps:
 
-Prerequisites
+### Prerequisites
 
 Make sure you have Node.js and npm installed on your machine.
 
-Clone the Repository
+### Clone the Repository
 
+```sh
 git clone https://github.com/yourusername/wordle-react.git
 cd wordle-react
+```
 
-Install Dependencies
+### Install Dependencies
 
+```sh
 npm install
+```
 
-Start the Development Server
+### Start the Development Server
 
+```sh
 npm start
+```
 
-This will launch the game in your default web browser at http://localhost:3000/.
+This will launch the game in your default web browser at `http://localhost:3000/`.
 
-Build for Production
+## Build for Production
 
 To create an optimized production build, run:
 
+```sh
 npm run build
+```
 
-Technologies Used
+## Technologies Used
 
-React.js
+- React.js
+- HTML, CSS, JavaScript
+- React Hooks
 
-HTML, CSS, JavaScript
-
-React Hooks
-
-Contributing
+## Contributing
 
 Contributions are welcome! Feel free to fork the repository and submit a pull request.
 
-License
+## License
 
 This project is licensed under the MIT License.
 
-Contact
+## Contact
 
 For questions or suggestions, contact me at [your email] or open an issue on GitHub.
 
