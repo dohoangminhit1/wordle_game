@@ -1,0 +1,244 @@
+.wordle-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+}
+
+.game-header h2 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.game-over-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(231, 76, 60, 0.2);
+}
+
+.game-over-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.guess-row {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.letter-box {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: #2c3e50;
+}
+
+.letter-box.correct {
+    background-color: #27ae60;
+    border-color: #27ae60;
+    color: white;
+    transform: scale(1.05);
+    animation: pop 0.3s ease-in-out;
+}
+
+.letter-box.present {
+    background-color: #f1c40f;
+    border-color: #f1c40f;
+    color: white;
+    animation: pop 0.3s ease-in-out;
+}
+
+.letter-box.absent {
+    background-color: #95a5a6;
+    border-color: #95a5a6;
+    color: white;
+    animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.input-area {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.guess-input {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    width: 150px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.guess-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.submit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.submit-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.new-game-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(46, 204, 113, 0.2);
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.new-game-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(46, 204, 113, 0.3);
+}
+
+.message {
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .wordle-container {
+        background-color: #2c3e50;
+    }
+
+    .game-header h2 {
+        color: white;
+    }
+
+    .letter-box {
+        background-color: #34495e;
+        border-color: #465c71;
+        color: white;
+    }
+
+    .guess-input {
+        background-color: #34495e;
+        border-color: #465c71;
+        color: white;
+    }
+
+    .message {
+        background-color: #34495e;
+        color: white;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .wordle-container {
+        padding: 1rem;
+    }
+
+    .letter-box {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.25rem;
+    }
+
+    .input-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guess-input {
+        width: 100%;
+        max-width: 200px;
+    }
+}
