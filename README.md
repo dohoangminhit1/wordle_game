@@ -10,10 +10,6 @@ A fun and interactive Wordle clone built using React.js! Challenge yourself to g
 - Keyboard input support
 - Color-coded hints for correct and misplaced letters
 
-## Demo
-
-Check out the live demo: [Link to demo] (if applicable)
-
 ## Installation
 
 To run this project locally, follow these steps:
@@ -25,7 +21,7 @@ Make sure you have Node.js and npm installed on your machine.
 ### Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/wordle-react.git
+git clone https://github.com/dohoangminhit1/wordle-react.git
 cd wordle-react
 ```
 
@@ -56,18 +52,6 @@ npm run build
 - React.js
 - HTML, CSS, JavaScript
 - React Hooks
-
-## Contributing
-
-Contributions are welcome! Feel free to fork the repository and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For questions or suggestions, contact me at [your email] or open an issue on GitHub.
 
 Enjoy the game! 🎉
 
